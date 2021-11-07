@@ -2,9 +2,8 @@
 const prezzoAlKm = 0.21;
 const percorsoKm = prompt('Inserisci il numero di Km che vuoi percorrere');
 const eta = Math.floor(prompt('Inserisci la tua età'));
-
 const d = new Date();
-document.getElementById('data').innerHTML = 'Calcolo effettuato in data: ' + d.getDay() + '/' + d.getMonth() + '/' + d.getFullYear();
+
 
 if (percorsoKm !== null && eta !== null && percorsoKm != '' && eta != '' && !(isNaN(percorsoKm)) && !(isNaN(eta))) {
     document.getElementById('eta').innerHTML = 'La tua età è: ' + eta + ' anni';
@@ -33,6 +32,8 @@ if (percorsoKm !== null && eta !== null && percorsoKm != '' && eta != '' && !(is
 
     console.log(prezzoFinale);
     document.getElementById('prezzo-finale').innerHTML = 'Il prezzo scontato del viaggio è: ' + prezzoFinale + '&euro;';
+
+    document.getElementById('data').innerHTML = 'Calcolo effettuato in data: ' + d.getDate() + '/' + (d.getMonth() + 1) + '/' + d.getFullYear();
 } else {
     alert('Inserisci dei dati validi');
 }
